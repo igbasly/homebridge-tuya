@@ -25,6 +25,12 @@
                     ]
                   },
                   { 
+                    "title": "Temperature and Humidity Sensor",
+                    "enum": [
+                      "TemperatureAndHumiditySensor"
+                      ]
+                  },
+                  { 
                     "title": "Smart Plug / Barely Smart Power Strip",
                     "enum": [
                       "Outlet"
@@ -369,7 +375,14 @@
                 "type": "integer",
                 "placeholder": "3",
                 "condition": {
-                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Convector', 'SimpleHeater'].includes(model.devices[arrayIndices].type);"
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['Convector', 'SimpleHeater', 'TemperatureAndHumiditySensor'].includes(model.devices[arrayIndices].type);"
+                }
+              },
+              "dpCurrentHumidity": {
+                "type": "integer",
+                "placeholder": "3",
+                "condition": {
+                  "functionBody": "return model.devices && model.devices[arrayIndices] && ['TemperatureAndHumiditySensor'].includes(model.devices[arrayIndices].type);"
                 }
               },
               "dpRotationSpeed": {
