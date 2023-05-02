@@ -1,7 +1,7 @@
 {
   "name": "homebridge-tuya-ian",
 
-  "version": "1.0.0",
+  "version": "1.0.2",
 
   "description": "🏠 Fork with some improvements of Homebridge-Tuya package",
   "main": "index.js",
