@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-const Proxy = require('http-mitm-proxy');
+const Proxy = require('http-mitm-proxy').Proxy;
 const EventEmitter = require('events');
 const program = require('commander');
 const QRCode = require('qrcode');
@@ -26,7 +26,7 @@ Object.keys(ifaces).forEach(name => {
     });
 });
 
-const proxy = Proxy();
+const proxy = new Proxy();
 const emitter = new EventEmitter();
 
 program
